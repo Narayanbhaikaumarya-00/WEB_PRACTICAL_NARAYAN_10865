@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>All Position Example (Static, Relative, Absolute, Fixed, Sticky)</title>
+  <style>
+    body {
+      height: 1500px; /* scroll ke liye */
+      font-family: Arial;
+    }
+
+    .box {
+      width: 150px;
+      height: 100px;
+      color: white;
+      text-align: center;
+      line-height: 100px;
+      font-weight: bold;
+      border-radius: 8px;
+      margin: 20px;
+    }
+
+    /* 1. Static */
+    .static {
+      position: static;
+      background-color: gray;
+    }
+
+    /* 2. Relative */
+    .relative {
+      position: relative;
+      top: 30px;
+      left: 40px;
+      background-color: green;
+    }
+
+    /* 3. Absolute */
+    .container {
+      position: relative;
+      height: 250px;
+      background-color: lightblue;
+      margin: 20px;
+      border-radius: 8px;
+    }
+    .absolute {
+      position: absolute;
+      top: 60px;
+      left: 80px;
+      background-color: red;
+    }
+
+    /* 4. Fixed */
+    .fixed {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: orange;
+    }
+
+    /* 5. Sticky */
+    .sticky {
+      position: sticky;
+      top: 0;
+      background-color: purple;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>CSS Position Property Example</h2>
+
+  <!-- Static -->
+  <div class="box static">Static</div>
+
+  <!-- Relative -->
+  <div class="box relative">Relative</div>
+
+  <!-- Absolute -->
+  <div class="container">
+    <p style="padding:10px;">Parent (Relative Container)</p>
+    <div class="box absolute">Absolute</div>
+  </div>
+
+  <!-- Sticky -->
+  <div class="box sticky">Sticky</div>
+
+  <!-- Fixed -->
+  <div class="box fixed">Fixed</div>
+
+  <p style="margin:50px;">Scroll down to see how Sticky and Fixed behave differently.</p>
+  <p style="margin:50px;">Keep scrolling...</p>
+  <p style="margin:50px;">Notice: Sticky box stays at the top while its section is visible, but moves when section ends.</p>
+
+</body>
+</html>
